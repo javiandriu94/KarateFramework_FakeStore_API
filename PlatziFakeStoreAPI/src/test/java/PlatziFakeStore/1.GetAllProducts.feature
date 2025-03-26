@@ -7,6 +7,7 @@ Background: Define url
         Given path 'products'
         When method GET
         Then status 200
+        And match response === '#[]'
         And match response[0].id === "#integer"
         And match response[0].title === "#string"
         And match response[0].slug === "#string"
